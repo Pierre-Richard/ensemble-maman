@@ -7,27 +7,18 @@
   >
     <mat-icon>menu</mat-icon>
   </button>
-  <span>My App</span>
-  <span class="example-spacer"></span>
-  <button
-    mat-icon-button
-    class="example-icon favorite-icon"
-    aria-label="Example icon-button with heart icon"
-  >
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button
-    mat-icon-button
-    class="example-icon"
-    aria-label="Example icon-button with share icon"
-  >
-    <mat-icon>share</mat-icon>
-  </button>
 </mat-toolbar>
 <mat-sidenav-container>
-  <mat-sidenav [(opened)]="isOpen"> Start </mat-sidenav>
-  <mat-sidenav-content>
-    End
-    <button mat-button (click)="isOpen = !isOpen">Toggle</button>
-  </mat-sidenav-content>
+  <mat-sidenav [(opened)]="isOpen" mode="side">
+    <mat-list>
+      <mat-list-item>
+        <a routerLink="/Home">Page d'accueil</a>
+      </mat-list-item>
+      <mat-list-item>
+        <a routerLink="/grilclothing">Vêtement de fille</a>
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content> <router-outlet /> </mat-sidenav-content>
 </mat-sidenav-container>

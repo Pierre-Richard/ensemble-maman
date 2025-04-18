@@ -3,7 +3,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 import { FormsModule } from '@angular/forms';
+import { RouterLink, RouterOutlet } from '@angular/router';
 @Component({
   selector: 'em-header',
   imports: [
@@ -12,6 +14,9 @@ import { FormsModule } from '@angular/forms';
     MatToolbarModule,
     MatSidenavModule,
     FormsModule,
+    RouterLink,
+    RouterOutlet,
+    MatListModule,
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
