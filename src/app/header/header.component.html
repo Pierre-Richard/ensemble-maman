@@ -3,6 +3,7 @@
     mat-icon-button
     class="example-icon"
     aria-label="Example icon-button with menu icon"
+    (click)="openMenu()"
   >
     <mat-icon>menu</mat-icon>
   </button>
@@ -23,3 +24,10 @@
     <mat-icon>share</mat-icon>
   </button>
 </mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav [(opened)]="isOpen"> Start </mat-sidenav>
+  <mat-sidenav-content>
+    End
+    <button mat-button (click)="isOpen = !isOpen">Toggle</button>
+  </mat-sidenav-content>
+</mat-sidenav-container>
