@@ -1,12 +1,20 @@
-<mat-toolbar color="primary">
-  <button
-    mat-icon-button
-    class="example-icon"
-    aria-label="Example icon-button with menu icon"
-    (click)="openMenu()"
-  >
-    <mat-icon>menu</mat-icon>
-  </button>
+<mat-toolbar class="test" color="primary">
+  <div class="test-b">
+    <img
+      src="assets/logo.svg"
+      [ngStyle]="{ 'width.px': 120, 'height.px': 65 }"
+    />
+  </div>
+  <div class="test-a">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+      (click)="openMenu()"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
 </mat-toolbar>
 <mat-sidenav-container>
   <mat-sidenav [(opened)]="isOpen" mode="side">

@@ -3,7 +3,7 @@
 :host {
   @include mat.toolbar-overrides(
     (
-      container-background-color: orange,
+      container-background-color: white,
       container-text-color: red,
     )
   );
@@ -12,7 +12,17 @@
 .mat-sidenav-container {
   height: calc(205vh - 115vh);
 }
+.test-b {
+  width: 50%;
+}
+.test-a {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+}
 
+.mat-toolbar {
+}
 .mat-sidenav {
   width: 200px;
   background-color: white;
