@@ -1,29 +1,24 @@
-<mat-toolbar class="test" color="primary">
-  <div class="test-b">
+<mat-toolbar color="primary" class="toolbar">
+  <div class="toolbar__img">
     <img
       src="assets/logo.svg"
       [ngStyle]="{ 'width.px': 120, 'height.px': 65 }"
     />
   </div>
-  <div class="test-a">
-    <button
-      mat-icon-button
-      class="example-icon"
-      aria-label="Example icon-button with menu icon"
-      (click)="openMenu()"
-    >
+  <div class="toolbar__button-menu">
+    <button mat-icon-button aria-label="menu icon" (click)="openMenu()">
       <mat-icon>menu</mat-icon>
     </button>
   </div>
 </mat-toolbar>
-<mat-sidenav-container>
-  <mat-sidenav [(opened)]="isOpen" mode="side">
+<mat-sidenav-container class="sidenav">
+  <mat-sidenav class="sidenav__open" [(opened)]="isOpen" mode="side">
     <mat-list>
       <mat-list-item>
         <a routerLink="/Home">Page d'accueil</a>
       </mat-list-item>
       <mat-list-item>
-        <a routerLink="/grilclothing">Vêtement de fille</a>
+        <a routerLink="/gril-clothe">Vêtement de fille</a>
       </mat-list-item>
     </mat-list>
   </mat-sidenav>

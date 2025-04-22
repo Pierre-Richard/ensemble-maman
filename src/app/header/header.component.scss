@@ -9,21 +9,20 @@
   );
 }
 
-.mat-sidenav-container {
+.toolbar {
+  &__img {
+    width: 50%;
+  }
+  &__button-menu {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+  }
+}
+.sidenav {
   height: calc(205vh - 115vh);
-}
-.test-b {
-  width: 50%;
-}
-.test-a {
-  display: flex;
-  justify-content: flex-end;
-  width: 50%;
-}
-
-.mat-toolbar {
-}
-.mat-sidenav {
-  width: 200px;
-  background-color: white;
+  &__open {
+    width: 200px;
+    background-color: white;
+  }
 }

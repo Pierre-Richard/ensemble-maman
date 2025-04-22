@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GirlclothingComponent } from './girlclothing.component';
+import { GrilClothePageComponent } from './gril-clothe-page.component';
 
-describe('GirlclothingComponent', () => {
-  let component: GirlclothingComponent;
-  let fixture: ComponentFixture<GirlclothingComponent>;
+describe('GrilClothePageComponent', () => {
+  let component: GrilClothePageComponent;
+  let fixture: ComponentFixture<GrilClothePageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GirlclothingComponent]
+      imports: [GrilClothePageComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(GirlclothingComponent);
+    fixture = TestBed.createComponent(GrilClothePageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

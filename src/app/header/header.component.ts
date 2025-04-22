@@ -26,7 +26,7 @@ import { CommonModule } from '@angular/common';
 export class HeaderComponent {
   isOpen: boolean = false;
   /**
-   * Ouvre le sideMenu lorsque je clique sur le button
+   * Opens the sideMenu when I click on the button
    */
   openMenu() {
     this.isOpen = !this.isOpen;
