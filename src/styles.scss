@@ -10,7 +10,7 @@ html {
         primary: mat.$azure-palette,
         tertiary: mat.$blue-palette,
       ),
-      typography: Roboto,
+      typography: Humanist,
       density: 0,
     )
   );
@@ -22,6 +22,6 @@ body {
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Humanist, sans-serif;
 }
 $whiteColor: white;
