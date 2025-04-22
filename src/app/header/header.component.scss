@@ -1,9 +1,10 @@
 @use "@angular/material" as mat;
+@import "../../styles.scss";
 
 :host {
   @include mat.toolbar-overrides(
     (
-      container-background-color: white,
+      container-background-color: $whiteColor,
       container-text-color: red,
     )
   );
@@ -23,6 +24,6 @@
   height: calc(205vh - 115vh);
   &__open {
     width: 200px;
-    background-color: white;
+    background-color: $whiteColor;
   }
 }
