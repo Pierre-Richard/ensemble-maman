@@ -1,0 +1,29 @@
+@use "@angular/material" as mat;
+@import "../../styles.scss";
+
+:host {
+  @include mat.toolbar-overrides(
+    (
+      container-background-color: $whiteColor,
+      container-text-color: red,
+    )
+  );
+}
+
+.toolbar {
+  &__img {
+    width: 50%;
+  }
+  &__button-menu {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+  }
+}
+.sidenav {
+  height: calc(205vh - 115vh);
+  &__open {
+    width: 200px;
+    background-color: $whiteColor;
+  }
+}

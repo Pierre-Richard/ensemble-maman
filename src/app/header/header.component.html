@@ -1,0 +1,27 @@
+<mat-toolbar color="primary" class="toolbar">
+  <div class="toolbar__img">
+    <img
+      src="assets/logo.svg"
+      [ngStyle]="{ 'width.px': 120, 'height.px': 65 }"
+    />
+  </div>
+  <div class="toolbar__button-menu">
+    <button mat-icon-button aria-label="menu icon" (click)="openMenu()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
+<mat-sidenav-container class="sidenav">
+  <mat-sidenav class="sidenav__open" [(opened)]="isOpen" mode="side">
+    <mat-list>
+      <mat-list-item>
+        <a routerLink="/Home">Page d'accueil</a>
+      </mat-list-item>
+      <mat-list-item>
+        <a routerLink="/gril-clothes">Vêtement de fille</a>
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content> <router-outlet /> </mat-sidenav-content>
+</mat-sidenav-container>
