@@ -8,3 +8,11 @@
   &__content {
   }
 }
+
+.title {
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  height: 25px;
+  margin-top: 10px;
+}

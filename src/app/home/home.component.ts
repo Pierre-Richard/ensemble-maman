@@ -7,6 +7,4 @@ import { CardsComponent } from '../cards/cards.component';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {
-  title: string = "J'utilise le input";
-}
+export class HomeComponent {}
