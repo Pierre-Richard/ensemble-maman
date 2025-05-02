@@ -11,5 +11,5 @@ export class CardsComponent {
   @Input() title = '';
   @Input() img = '';
   @Input() text = 'Par défaut';
-  @Input() backgroundColor = '';
+  @Input() backgroundColor = 'red';
 }
