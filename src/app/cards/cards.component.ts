@@ -10,6 +10,5 @@ import { CommonModule } from '@angular/common';
 export class CardsComponent {
   @Input() title = '';
   @Input() img = '';
-  @Input() text = 'Par défaut';
   @Input() backgroundColor = 'red';
 }
