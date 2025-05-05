@@ -12,4 +12,5 @@ export class CardsComponent {
   title = input.required<string>();
   img = input.required<string>();
   backgroundColor = input.required<string | number>();
+  routerLink = input.required<string>();
 }
