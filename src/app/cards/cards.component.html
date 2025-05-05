@@ -1,6 +1,6 @@
-<mat-card class="card" [style.background-color]="backgroundColor">
+<mat-card class="card" [style.background-color]="backgroundColor()">
   <mat-card-content class="card__content">
-    <img mat-card-lg-image src="{{ img }}" />
+    <img mat-card-lg-image src="{{ img() }}" />
   </mat-card-content>
 </mat-card>
-<div class="title">{{ title }}</div>
+<div class="title">{{ title() }}</div>

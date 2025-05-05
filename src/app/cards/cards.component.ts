@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 @Component({
@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './cards.component.scss',
 })
 export class CardsComponent {
-  @Input() title = '';
-  @Input() img = '';
-  @Input() backgroundColor = '';
+  title = input.required<string>();
+  img = input.required<string>();
+  backgroundColor = input.required<string | number>();
 }
