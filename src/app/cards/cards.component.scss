@@ -1,13 +1,14 @@
+$px250: 250px;
 .card {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 250px;
-  height: 250px;
+  max-width: $px250;
+  height: $px250;
   &__title {
     display: flex;
     justify-content: center;
-    width: 250px;
+    width: $px250;
     height: 25px;
     margin-top: 10px;
   }
