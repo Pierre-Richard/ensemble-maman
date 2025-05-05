@@ -1,6 +1,11 @@
-<mat-card class="card" [style.background-color]="backgroundColor()">
+<mat-card
+  class="card"
+  routerLink="/girl-clothes"
+  [style.background-color]="backgroundColor()"
+>
   <mat-card-content class="card__content">
     <img mat-card-lg-image src="{{ img() }}" />
   </mat-card-content>
 </mat-card>
+<router-outlet />
 <div class="card__title">{{ title() }}</div>
