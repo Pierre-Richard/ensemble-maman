@@ -1,11 +1,11 @@
 <mat-card
   class="card"
-  routerLink="{{ routerLink() }}"
-  [style.background-color]="backgroundColor()"
+  routerLink="{{ card().link }}"
+  [style.background-color]="card().backgroundColor"
 >
   <mat-card-content class="card__content">
-    <img mat-card-lg-image src="{{ img() }}" />
+    <img mat-card-lg-image src="{{ card().img }}" />
   </mat-card-content>
 </mat-card>
 <router-outlet />
-<div class="card__title">{{ title() }}</div>
+<div class="card__title">{{ card().title }}</div>
