@@ -1,42 +1,20 @@
 <div class="cards__container">
-  <em-cards
-    [card]="{
-      title: 'Vêtements fille',
-      img: 'assets/robe-rose.jpg',
-      backgroundColor: 'pink',
-      link: '/girl-clothes'
-    }"
-  ></em-cards>
-  <em-cards
-    [card]="{
-      title: 'Vêtements fille',
-      img: 'assets/robe-rose.jpg',
-      backgroundColor: 'pink',
-      link: '/girl-clothes'
-    }"
-  ></em-cards>
-  <em-cards
-    [card]="{
-      title: 'Vêtements fille',
-      img: 'assets/robe-rose.jpg',
-      backgroundColor: 'pink',
-      link: '/girl-clothes'
-    }"
-  ></em-cards>
-  <em-cards
-    [card]="{
-      title: 'Vêtements fille',
-      img: 'assets/robe-rose.jpg',
-      backgroundColor: 'pink',
-      link: '/girl-clothes'
-    }"
-  ></em-cards>
-  <em-cards
-    [card]="{
-      title: 'Vêtements fille',
-      img: 'assets/robe-rose.jpg',
-      backgroundColor: 'pink',
-      link: '/girl-clothes'
-    }"
-  ></em-cards>
+  <div *ngFor="let card of cards">
+    <em-cards
+      [card]="{
+        title: card.title,
+        img: card.img,
+        backgroundColor: card.backgroundColor,
+        link: card.link,
+      }"
+    ></em-cards>
+    <em-cards
+      [card]="{
+        title: card.title,
+        img: card.img,
+        backgroundColor: card.backgroundColor,
+        link:  card.link,
+      }"
+    ></em-cards>
+  </div>
 </div>
