@@ -1,1 +1,12 @@
-<p>home works!</p>
+<div class="cards__container">
+  @for (card of cardUI; track $index) {
+  <em-cards
+    [card]="{
+          title: card.title,
+          img: card.img,
+          backgroundColor: card.backgroundColor,
+          link: card.link,
+        }"
+  ></em-cards>
+  }
+</div>
