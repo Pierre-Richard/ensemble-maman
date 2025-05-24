@@ -1,0 +1,15 @@
+:host ::ng-deep p-carousel {
+  width: 50%;
+  margin: auto;
+}
+
+:host ::ng-deep .p-carousel-prev-button {
+  background-color: white;
+  margin-right: -100px;
+  z-index: 9999;
+}
+:host ::ng-deep .p-carousel-next-button {
+  background-color: white;
+  margin-left: -101px;
+  z-index: 9999;
+}
