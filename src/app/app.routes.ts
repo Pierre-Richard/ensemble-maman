@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { GirlClothesPageComponent } from './girl-clothes-page/girl-clothes-page.component';
+import { HomeComponent } from './shared/components/home/home.component';
+import { DetailClothesPageComponent } from './pages/detail-clothes-page/detail-clothes-page.component';
 
 export const routes: Routes = [
   { path: 'Home', component: HomeComponent },
-  { path: 'girl-clothes', component: GirlClothesPageComponent },
+  { path: 'detail-clothes', component: DetailClothesPageComponent },
 ];

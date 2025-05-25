@@ -5,24 +5,24 @@ export const CARD_UI_CONSTANT: Card[] = [
     title: 'Vêtements fille',
     img: 'assets/robe-rose.jpg',
     backgroundColor: 'pink',
-    link: '/girl-clothes',
+    link: '/detail-clothes',
   },
   {
     title: 'Vêtements fille',
     img: 'assets/robe-rose.jpg',
     backgroundColor: 'pink',
-    link: '/girl-clothes',
+    link: '/detail-clothes',
   },
   {
     title: 'Vêtements fille',
     img: 'assets/robe-rose.jpg',
     backgroundColor: 'pink',
-    link: '/girl-clothes',
+    link: '/detail-clothes',
   },
   {
     title: 'Vêtements fille',
     img: 'assets/robe-rose.jpg',
     backgroundColor: 'pink',
-    link: '/girl-clothes',
+    link: '/detail-clothes',
   },
 ];
