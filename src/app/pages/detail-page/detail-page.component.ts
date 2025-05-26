@@ -1,18 +1,14 @@
 import { Component } from '@angular/core';
 import { Card } from '../../shared/interfaces/Card';
-import { CardsComponent } from '../../shared/components/cards/cards.component';
+import { CardsListComponent } from '../../shared/components/cards-list/cards-list.component';
+import { CARD_UI_CONSTANT } from '../../shared/constants/card_Ui_Constant';
 
 @Component({
   selector: 'em-detail-page',
-  imports: [CardsComponent],
+  imports: [CardsListComponent],
   templateUrl: './detail-page.component.html',
   styleUrl: './detail-page.component.scss',
 })
 export class DetailPageComponent {
-  cards: Card = {
-    title: 'Vêtements fille',
-    img: 'assets/robe-rose.jpg',
-    backgroundColor: 'green',
-    link: '/detail',
-  };
+  tab: Card[] = CARD_UI_CONSTANT;
 }
