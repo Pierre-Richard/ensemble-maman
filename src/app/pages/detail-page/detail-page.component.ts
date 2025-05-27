@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
 import { Card } from '../../shared/interfaces/Card';
 import { CardsListComponent } from '../../shared/components/cards-list/cards-list.component';
-import { CARD_UI_CONSTANT } from '../../shared/constants/card_Ui_Constant';
+import { CARD_UI_CONSTANT } from '../../shared/constants/card-Ui.constant';
 
 @Component({
   selector: 'em-detail-page',
-  imports: [CardsListComponent],
+  imports: [],
   templateUrl: './detail-page.component.html',
   styleUrl: './detail-page.component.scss',
 })
-export class DetailPageComponent {
-  tab: Card[] = CARD_UI_CONSTANT;
-}
+export class DetailPageComponent {}

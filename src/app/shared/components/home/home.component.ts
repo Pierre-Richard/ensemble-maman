@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
-import { CARD_UI_CONSTANT } from '../../../shared/constants/card_Ui_Constant';
 import { CommonModule } from '@angular/common';
-
 import { CarouselComponent } from '../../../shared/components/carousel/carousel.component';
+import { CARD_UI_CONSTANT } from '../../constants/card-Ui.constant';
+import { Card } from '../../interfaces/Card';
+import { CardsListComponent } from '../cards-list/cards-list.component';
 
 @Component({
   selector: 'em-home',
-  imports: [CommonModule, CarouselComponent],
+  imports: [CommonModule, CarouselComponent, CardsListComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  cardUI = CARD_UI_CONSTANT;
+  cards: Card[] = CARD_UI_CONSTANT;
 }
