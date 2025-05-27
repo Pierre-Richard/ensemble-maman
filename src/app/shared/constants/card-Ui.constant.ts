@@ -13,4 +13,22 @@ export const CARD_UI_CONSTANT: Card[] = [
     backgroundColor: 'pink',
     link: '/detail',
   },
+  {
+    title: 'Vêtements fille',
+    img: 'assets/robe-rose.jpg',
+    backgroundColor: 'pink',
+    link: '/detail',
+  },
+  {
+    title: 'Vêtements fille',
+    img: 'assets/robe-rose.jpg',
+    backgroundColor: 'pink',
+    link: '/detail',
+  },
+  {
+    title: 'Vêtements fille',
+    img: 'assets/robe-rose.jpg',
+    backgroundColor: 'pink',
+    link: '/detail',
+  },
 ];
