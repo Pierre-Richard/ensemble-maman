@@ -1,1 +1,16 @@
-<p>checkbox-list works!</p>
+<span class="example-list-section">
+  <mat-checkbox class="example-margin">
+    {{ task() }}
+  </mat-checkbox>
+</span>
+<span class="example-list-section">
+  <ul>
+    @for (subtask of task(); track $index) {
+    <li>
+      <mat-checkbox [checked]="subtask.completed">
+        {{ subtask.name }}
+      </mat-checkbox>
+    </li>
+    }
+  </ul>
+</span>

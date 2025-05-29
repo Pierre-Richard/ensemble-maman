@@ -1,18 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { Checkbox } from '../../interfaces/Checkbox';
-
+import { FormsModule } from '@angular/forms';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 @Component({
   selector: 'em-checkbox-list',
-  imports: [],
+  imports: [MatCheckboxModule],
   templateUrl: './checkbox-list.component.html',
   styleUrl: './checkbox-list.component.scss',
 })
 export class CheckboxListComponent {
   // si possible faire de task un signal
-  task: Checkbox[] = [
-    {
-      name: '1an',
-      completed: false,
-    },
-  ];
+  task = input.required<Checkbox[]>();
 }
