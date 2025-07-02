@@ -1,9 +1,8 @@
-import { Component, inject, input, signal } from '@angular/core';
+import { Component, inject, Input, input, signal } from '@angular/core';
 import { Checkbox } from '../../interfaces/Checkbox';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { CheckboxLabel } from '../../interfaces/CheckboxLabel';
-import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
-
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 const CheckboxLabelUi: CheckboxLabel = {
   ['oneToTwelve']: '1 à 12 mois',
   ['oneToThree']: '1 à 3 ans',
@@ -18,26 +17,7 @@ const CheckboxLabelUi: CheckboxLabel = {
   styleUrl: './checkbox-list.component.scss',
 })
 export class CheckboxListComponent {
-  task = input.required<string[]>();
-
-  tasks = signal<string[]>([]);
   checkboxLabelUi = CheckboxLabelUi;
-
-  private formBuilder = inject(FormBuilder);
-
-  sizeForm = this.formBuilder.group({
-    oneToTwelve: [false],
-    oneToThree: [false],
-    fourToSixth: [false],
-    sevenToNine: [false],
-    nineAndMore: [false],
-  });
-
-  ngOnInit() {
-    this.sizeForm.valueChanges.subscribe((x) => {
-      console.log('sizeForm', x);
-    });
-    console.log('Value', Object.keys(this.sizeForm.value));
-    this.tasks.set(Object.keys(this.sizeForm.value));
-  }
+  @Input() form!: FormGroup;
+  tasks = input.required<string[]>();
 }
