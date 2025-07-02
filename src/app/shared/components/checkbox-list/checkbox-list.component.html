@@ -1,0 +1,8 @@
+@if(form){
+<form [formGroup]="form">
+  @for(task of tasks(); track task){
+  <label>{{ checkboxLabelUi[task] }}</label>
+  <mat-checkbox [formControlName]="task"></mat-checkbox>
+  }
+</form>
+}

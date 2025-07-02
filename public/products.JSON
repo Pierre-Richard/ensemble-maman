@@ -1,0 +1,32 @@
+[
+  {
+    "title": "T-shirt",
+    "size": "XL",
+    "acrif": "false",
+    "img": "./assets/couches.jpg"
+  },
+  {
+    "title": "T-shirt",
+    "size": "L",
+    "acrif": "true",
+    "img": "./assets/couches.jpg"
+  },
+  {
+    "title": "T-shirt",
+    "size": "XL",
+    "acrif": "false",
+    "img": "./assets/couches.jpg"
+  },
+  {
+    "title": "T-shirt",
+    "size": "M",
+    "acrif": "false",
+    "img": "./assets/couches.jpg"
+  },
+  {
+    "title": "T-shirt",
+    "size": "S",
+    "acrif": "true",
+    "img": "./assets/couches.jpg"
+  }
+]
