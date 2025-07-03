@@ -1,9 +1,9 @@
-import { CurrencyPipe } from '@angular/common';
 import { Component, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
-import { CheckboxListComponent } from '../../shared/components/checkbox-list/checkbox-list.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { CheckboxListComponent } from '../../shared/components/checkbox-list/checkbox-list.component';
 import { CheckboxLabel } from '../../shared/interfaces/CheckboxLabel';
+import { CoucheService } from '../../shared/services/couche.service';
 
 //1 creer interface pour CheckboxLabelUi
 // 2 mettre le form dans le la page checkobx et importer le composant checklist dans le detail compoent et que tout marche
@@ -36,11 +36,17 @@ export class DetailPageComponent {
   });
   tasks = signal<string[]>([]);
 
+  constructor(private coucheService: CoucheService) {}
+
   ngOnInit() {
     this.sizeForm.valueChanges.subscribe((x) => {
       console.log('sizeForm', x);
     });
     console.log('Value', Object.keys(this.sizeForm.value));
     this.tasks.set(Object.keys(this.sizeForm.value));
+
+    this.coucheService.listCouche().subscribe((couche) => {
+      console.log("j'ai la Data", couche);
+    });
   }
 }
