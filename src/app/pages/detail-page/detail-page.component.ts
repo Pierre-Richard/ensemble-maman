@@ -3,7 +3,9 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { CheckboxListComponent } from '../../shared/components/checkbox-list/checkbox-list.component';
 import { CheckboxLabel } from '../../shared/interfaces/CheckboxLabel';
-import { CoucheService } from '../../shared/services/couche.service';
+import { CouchesService } from '../../shared/services/couches/couches.service';
+import { ToysService } from '../../shared/services/toys/toys.service';
+import { ProductsService } from '../../shared/services/products/products.service';
 
 //1 creer interface pour CheckboxLabelUi
 // 2 mettre le form dans le la page checkobx et importer le composant checklist dans le detail compoent et que tout marche
@@ -37,7 +39,11 @@ export class DetailPageComponent {
   });
   tasks = signal<string[]>([]);
 
-  constructor(private coucheService: CoucheService) {}
+  constructor(
+    private couchesService: CouchesService,
+    private toysService: ToysService,
+    private productsService: ProductsService
+  ) {}
 
   ngOnInit() {
     this.sizeForm.valueChanges.subscribe((x) => {
@@ -46,10 +52,16 @@ export class DetailPageComponent {
     console.log('Value', Object.keys(this.sizeForm.value));
     this.tasks.set(Object.keys(this.sizeForm.value));
 
-    this.coucheService.listCouche().subscribe((couche) => {
+    this.couchesService.listCouches().subscribe((couche) => {
       this.dataFromJson = couche;
+      console.log('Couches:', this.dataFromJson);
+    });
 
-      console.log("j'ai la Data", this.dataFromJson);
+    this.toysService.lstToys().subscribe((toy) => {
+      console.log('Jouets:', toy);
+    });
+    this.productsService.listProducts().subscribe((product) => {
+      console.log('Produits', product);
     });
   }
 }

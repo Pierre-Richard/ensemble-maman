@@ -4,10 +4,10 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root',
 })
-export class CoucheService {
+export class CouchesService {
   constructor(private http: HttpClient) {}
 
-  listCouche() {
+  listCouches() {
     //recuperer URL des couches
     const url = 'assets/clothes.json';
     // return mon url
