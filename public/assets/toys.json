@@ -1,29 +1,34 @@
 [
   {
+    "id": 1,
     "title": "Toys",
     "size": "XL",
     "acrif": "false",
     "img": "./assets/jouets.jpeg"
   },
   {
+    "id": 2,
     "title": "Toys",
     "size": "XL",
     "acrif": "false",
     "img": "./assets/jouets.jpeg"
   },
   {
+    "id": 3,
     "title": "Toys",
     "size": "XL",
     "acrif": "false",
     "img": "./assets/jouets.jpeg"
   },
   {
+    "id": 4,
     "title": "Toys",
     "size": "XL",
     "acrif": "false",
     "img": "./assets/jouets.jpeg"
   },
   {
+    "id": 5,
     "title": "Toys",
     "size": "XL",
     "acrif": "false",

@@ -1,29 +1,34 @@
 [
   {
+    "id": 1,
     "title": "clothes",
     "size": "S",
     "acrif": "false",
     "img": "./assets/t-shirt-bleu.jpg"
   },
   {
+    "id": 2,
     "title": "clothes",
     "size": "S",
     "acrif": "false",
     "img": "./assets/t-shirt-bleu.jpg"
   },
   {
+    "id": 3,
     "title": "clothes",
     "size": "M",
     "acrif": "false",
     "img": "./assets/t-shirt-bleu.jpg"
   },
   {
+    "id": 4,
     "title": "clothes",
     "size": "XL",
     "acrif": "false",
     "img": "./assets/t-shirt-bleu.jpg"
   },
   {
+    "id": 5,
     "title": "clothes",
     "size": "XL",
     "acrif": "false",
