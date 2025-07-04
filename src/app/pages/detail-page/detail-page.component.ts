@@ -26,6 +26,7 @@ export class DetailPageComponent {
   private formBuilder = inject(FormBuilder);
 
   checkboxLabelUi = CheckboxLabelUi;
+  dataFromJson: any;
 
   sizeForm = this.formBuilder.group({
     oneToTwelve: [false],
@@ -46,7 +47,9 @@ export class DetailPageComponent {
     this.tasks.set(Object.keys(this.sizeForm.value));
 
     this.coucheService.listCouche().subscribe((couche) => {
-      console.log("j'ai la Data", couche);
+      this.dataFromJson = couche;
+
+      console.log("j'ai la Data", this.dataFromJson);
     });
   }
 }

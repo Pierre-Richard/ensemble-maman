@@ -9,8 +9,8 @@ export class CoucheService {
 
   listCouche() {
     //recuperer URL des couches
-    const url = 'assets/couches.jpg';
+    const url = 'assets/clothes.json';
     // return mon url
-    return this.http.get(url, { responseType: 'text' });
+    return this.http.get(url);
   }
 }
