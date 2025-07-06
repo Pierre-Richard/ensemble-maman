@@ -3,9 +3,9 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { CheckboxListComponent } from '../../shared/components/checkbox-list/checkbox-list.component';
 import { CheckboxLabel } from '../../shared/interfaces/CheckboxLabel';
-import { CouchesService } from '../../shared/services/couches/couches.service';
-import { ToysService } from '../../shared/services/toys/toys.service';
-import { ProductsService } from '../../shared/services/products/products.service';
+import { HygieneProductclient } from '../../shared/services/hygieneProductClient/hygieneProductClient.service';
+import { ProductClient } from '../../shared/services/productClient/productClient.service';
+import { ToyClient } from '../../shared/services/toyClient/toyClient.service';
 
 //1 creer interface pour CheckboxLabelUi
 // 2 mettre le form dans le la page checkobx et importer le composant checklist dans le detail compoent et que tout marche
@@ -28,7 +28,6 @@ export class DetailPageComponent {
   private formBuilder = inject(FormBuilder);
 
   checkboxLabelUi = CheckboxLabelUi;
-  dataFromJson: any;
 
   sizeForm = this.formBuilder.group({
     oneToTwelve: [false],
@@ -40,9 +39,9 @@ export class DetailPageComponent {
   tasks = signal<string[]>([]);
 
   constructor(
-    private couchesService: CouchesService,
-    private toysService: ToysService,
-    private productsService: ProductsService
+    private hygieneProductclient: HygieneProductclient,
+    private toyClient: ToyClient,
+    private productClient: ProductClient
   ) {}
 
   ngOnInit() {
@@ -52,16 +51,26 @@ export class DetailPageComponent {
     console.log('Value', Object.keys(this.sizeForm.value));
     this.tasks.set(Object.keys(this.sizeForm.value));
 
-    this.couchesService.listCouches().subscribe((couche) => {
-      this.dataFromJson = couche;
-      console.log('Couches:', this.dataFromJson);
-    });
+    this.hygieneProductclient
+      .listHygienesProducts()
+      .subscribe((hygieneProduct) => {
+        console.log(
+          'hygieneProduct:',
+          hygieneProduct.map((h) => h.title)
+        );
+      });
 
-    this.toysService.lstToys().subscribe((toy) => {
-      console.log('Jouets:', toy);
+    this.toyClient.listToys().subscribe((toy) => {
+      console.log(
+        'Jouets:',
+        toy.map((a) => a.actif)
+      );
     });
-    this.productsService.listProducts().subscribe((product) => {
-      console.log('Produits', product);
+    this.productClient.listProducts().subscribe((productClient) => {
+      console.log(
+        'Produits - Client',
+        productClient.map((p) => p.title)
+      );
     });
   }
 }
