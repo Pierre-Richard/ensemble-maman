@@ -7,8 +7,6 @@ import { HygieneProductclient } from '../../shared/services/hygieneProductClient
 import { ProductClient } from '../../shared/services/productClient/productClient.service';
 import { ToyClient } from '../../shared/services/toyClient/toyClient.service';
 
-//1 creer interface pour CheckboxLabelUi
-// 2 mettre le form dans le la page checkobx et importer le composant checklist dans le detail compoent et que tout marche
 const CheckboxLabelUi: CheckboxLabel = {
   ['oneToTwelve']: '1 à 12 mois',
   ['oneToThree']: '1 à 3 ans',
@@ -16,8 +14,7 @@ const CheckboxLabelUi: CheckboxLabel = {
   ['sevenToNine']: '7 à 9 ans',
   ['nineAndMore']: '9 et plus',
 };
-// Pour les garçons ajouter deux taille supplementaire
-// Faire en sorte que checkboxLabelUi soit dans le dossier partagé  (shared)
+
 @Component({
   selector: 'em-detail-page',
   imports: [ReactiveFormsModule, MatCheckboxModule, CheckboxListComponent],
@@ -39,7 +36,7 @@ export class DetailPageComponent {
   tasks = signal<string[]>([]);
 
   constructor(
-    private hygieneProductclient: HygieneProductclient,
+    private hygieneProductClient: HygieneProductclient,
     private toyClient: ToyClient,
     private productClient: ProductClient
   ) {}
@@ -51,12 +48,12 @@ export class DetailPageComponent {
     console.log('Value', Object.keys(this.sizeForm.value));
     this.tasks.set(Object.keys(this.sizeForm.value));
 
-    this.hygieneProductclient
+    this.hygieneProductClient
       .listHygienesProducts()
       .subscribe((hygieneProduct) => {
         console.log(
           'hygieneProduct:',
-          hygieneProduct.map((h) => h.title)
+          hygieneProduct.map((hygiene) => hygiene.title)
         );
       });
 
@@ -69,7 +66,7 @@ export class DetailPageComponent {
     this.productClient.listProducts().subscribe((productClient) => {
       console.log(
         'Produits - Client',
-        productClient.map((p) => p.title)
+        productClient.map((product) => product.title)
       );
     });
   }

@@ -12,8 +12,6 @@ export class HygieneProductclient {
 
   listHygienesProducts(): Observable<HygieneProduct[]> {
     // return mon url
-    return this.http.get<HygieneProduct[]>(
-      environment.api_url_hygienesproducts
-    );
+    return this.http.get<HygieneProduct[]>(environment.api_url_hygieneproduct);
   }
 }
