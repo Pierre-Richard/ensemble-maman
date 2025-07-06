@@ -1,35 +1,40 @@
 [
   {
     "id": 1,
-    "title": "clothes",
+    "title": "t-shirt nike",
+    "gender": "boy",
     "size": "S",
     "actif": "false",
     "img": "./assets/t-shirt-bleu.jpg"
   },
   {
     "id": 2,
-    "title": "clothes",
+    "title": "t-shirt nike",
+    "gender": "boy",
     "size": "S",
     "actif": "false",
     "img": "./assets/t-shirt-bleu.jpg"
   },
   {
     "id": 3,
-    "title": "clothes",
+    "title": "t-shirt nike",
+    "gender": "boy",
     "size": "M",
     "actif": "false",
     "img": "./assets/t-shirt-bleu.jpg"
   },
   {
     "id": 4,
-    "title": "clothes",
+    "title": "t-shirt nike",
+    "gender": "boy",
     "size": "XL",
     "actif": "false",
     "img": "./assets/t-shirt-bleu.jpg"
   },
   {
     "id": 5,
-    "title": "clothes",
+    "title": "t-shirt nike",
+    "gender": "boy",
     "size": "XL",
     "actif": "false",
     "img": "./assets/t-shirt-bleu.jpg"
