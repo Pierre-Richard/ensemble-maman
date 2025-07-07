@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { HygieneProductclient } from './hygieneProductClient.client';
+import { HygieneProductclient } from './hygieneProduct.client';
 
 describe('HygieneProductclient', () => {
   let client: HygieneProductclient;

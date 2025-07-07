@@ -7,7 +7,7 @@ import { HygieneProduct } from '../../interfaces/hygiene-product';
 @Injectable({
   providedIn: 'root',
 })
-export class HygieneProductclient {
+export class HygieneProductClient {
   constructor(private http: HttpClient) {}
 
   getHygienesProducts(): Observable<HygieneProduct[]> {
