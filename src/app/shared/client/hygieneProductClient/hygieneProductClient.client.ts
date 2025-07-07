@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from '../../../environments/environment';
-import { HygieneProduct } from '../../interfaces/hygienesproducts';
+import { environment } from '../../../../environments/environment';
 import { Observable } from 'rxjs';
+import { HygieneProduct } from '../../interfaces/hygiene-product';
 
 @Injectable({
   providedIn: 'root',
@@ -10,8 +10,8 @@ import { Observable } from 'rxjs';
 export class HygieneProductclient {
   constructor(private http: HttpClient) {}
 
-  listHygienesProducts(): Observable<HygieneProduct[]> {
+  getHygienesProducts(): Observable<HygieneProduct[]> {
     // return mon url
-    return this.http.get<HygieneProduct[]>(environment.api_url_hygieneproduct);
+    return this.http.get<HygieneProduct[]>(environment.API_URL.HYGIENE_PRODUCT);
   }
 }

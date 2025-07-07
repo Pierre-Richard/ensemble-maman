@@ -1,16 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ProductClient } from './productClient.service';
+import { ProductClient } from './productClient.client';
 
 describe('ProductClientService', () => {
-  let service: ProductClient;
+  let client: ProductClient;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(ProductClient);
+    client = TestBed.inject(ProductClient);
   });
 
   it('should be created', () => {
-    expect(service).toBeTruthy();
+    expect(client).toBeTruthy();
   });
 });

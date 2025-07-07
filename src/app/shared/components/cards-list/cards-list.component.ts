@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { Card } from '../../interfaces/Card';
+import { Card } from '../../interfaces/card';
 import { CommonModule } from '@angular/common';
 import { CardsComponent } from '../cards/cards.component';
 

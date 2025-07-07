@@ -2,10 +2,10 @@ import { Component, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { CheckboxListComponent } from '../../shared/components/checkbox-list/checkbox-list.component';
-import { CheckboxLabel } from '../../shared/interfaces/CheckboxLabel';
-import { HygieneProductclient } from '../../shared/services/hygieneProductClient/hygieneProductClient.service';
-import { ProductClient } from '../../shared/services/productClient/productClient.service';
-import { ToyClient } from '../../shared/services/toyClient/toyClient.service';
+import { CheckboxLabel } from '../../shared/interfaces/checkboxLabel';
+import { HygieneProductclient } from '../../shared/client/hygieneProductClient/hygieneProductClient.client';
+import { ProductClient } from '../../shared/client/productClient/productClient.client';
+import { ToyClient } from '../../shared/client/toyClient/toyClient.client';
 
 const CheckboxLabelUi: CheckboxLabel = {
   ['oneToTwelve']: '1 à 12 mois',
@@ -49,7 +49,7 @@ export class DetailPageComponent {
     this.tasks.set(Object.keys(this.sizeForm.value));
 
     this.hygieneProductClient
-      .listHygienesProducts()
+      .getHygienesProducts()
       .subscribe((hygieneProduct) => {
         console.log(
           'hygieneProduct:',
@@ -57,13 +57,13 @@ export class DetailPageComponent {
         );
       });
 
-    this.toyClient.listToys().subscribe((toy) => {
+    this.toyClient.getlistToys().subscribe((toy) => {
       console.log(
         'Jouets:',
         toy.map((a) => a.actif)
       );
     });
-    this.productClient.listProducts().subscribe((productClient) => {
+    this.productClient.getlistProducts().subscribe((productClient) => {
       console.log(
         'Produits - Client',
         productClient.map((product) => product.title)

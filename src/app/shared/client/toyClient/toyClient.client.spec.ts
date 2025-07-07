@@ -1,16 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ToyClient } from './toyClient.service';
+import { ToyClient } from './toyClient.client';
 
 describe('ToyClient', () => {
-  let service: ToyClient;
+  let client: ToyClient;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(ToyClient);
+    client = TestBed.inject(ToyClient);
   });
 
   it('should be created', () => {
-    expect(service).toBeTruthy();
+    expect(client).toBeTruthy();
   });
 });

@@ -1,4 +1,4 @@
-import { Checkbox } from '../interfaces/Checkbox';
+import { Checkbox } from '../interfaces/checkbox';
 
 export const CHECKBOX_TASK_CONSTANT: Checkbox[] = [
   {
