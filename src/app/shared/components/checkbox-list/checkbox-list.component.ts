@@ -1,7 +1,7 @@
 import { Component, inject, Input, input, signal } from '@angular/core';
-import { Checkbox } from '../../interfaces/Checkbox';
+import { Checkbox } from '../../interfaces/checkbox';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { CheckboxLabel } from '../../interfaces/CheckboxLabel';
+import { CheckboxLabel } from '../../interfaces/checkboxLabel';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 const CheckboxLabelUi: CheckboxLabel = {
   ['oneToTwelve']: '1 à 12 mois',

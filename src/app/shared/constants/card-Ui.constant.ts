@@ -1,4 +1,4 @@
-import { Card } from '../interfaces/Card';
+import { Card } from '../interfaces/card';
 
 export const CARD_UI_CONSTANT: Card[] = [
   {

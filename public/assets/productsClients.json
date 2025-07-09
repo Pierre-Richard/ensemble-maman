@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "t-shirt nike",
+    "gender": "boy",
+    "size": "S",
+    "actif": "false",
+    "img": "./assets/t-shirt-bleu.jpg"
+  },
+  {
+    "id": 2,
+    "title": "t-shirt nike",
+    "gender": "boy",
+    "size": "S",
+    "actif": "false",
+    "img": "./assets/t-shirt-bleu.jpg"
+  },
+  {
+    "id": 3,
+    "title": "t-shirt nike",
+    "gender": "boy",
+    "size": "M",
+    "actif": "false",
+    "img": "./assets/t-shirt-bleu.jpg"
+  },
+  {
+    "id": 4,
+    "title": "t-shirt nike",
+    "gender": "boy",
+    "size": "XL",
+    "actif": "false",
+    "img": "./assets/t-shirt-bleu.jpg"
+  },
+  {
+    "id": 5,
+    "title": "t-shirt nike",
+    "gender": "boy",
+    "size": "XL",
+    "actif": "false",
+    "img": "./assets/t-shirt-bleu.jpg"
+  }
+]
