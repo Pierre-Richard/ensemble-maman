@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { HygieneProductclient } from './hygieneProduct.client';
+import { HygieneProductClient } from './hygieneProduct.client';
 
 describe('HygieneProductclient', () => {
-  let client: HygieneProductclient;
+  let client: HygieneProductClient;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    client = TestBed.inject(HygieneProductclient);
+    client = TestBed.inject(HygieneProductClient);
   });
 
   it('should be created', () => {

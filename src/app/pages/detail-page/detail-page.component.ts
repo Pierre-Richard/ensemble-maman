@@ -5,7 +5,7 @@ import { CheckboxListComponent } from '../../shared/components/checkbox-list/che
 import { CheckboxLabel } from '../../shared/interfaces/checkboxLabel';
 import { ProductClient } from '../../shared/client/productClient/productClient.client';
 import { ToyClient } from '../../shared/client/toyClient/toyClient.client';
-import { HygieneProductClient } from '../../shared/client/hygieneProductClient/hygieneProduct.client';
+import { HygieneProductClient } from '../../shared/client/hygieneProduct/hygieneProduct.client';
 
 const CheckboxLabelUi: CheckboxLabel = {
   ['oneToTwelve']: '1 à 12 mois',
@@ -49,7 +49,7 @@ export class DetailPageComponent {
     this.tasks.set(Object.keys(this.sizeForm.value));
 
     this.hygieneProductClient
-      .getHygienesProducts()
+      .getHygieneProduct()
       .subscribe((hygieneProduct) => {
         console.log(
           'hygieneProduct:',

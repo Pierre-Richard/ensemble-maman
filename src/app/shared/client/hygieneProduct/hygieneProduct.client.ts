@@ -10,7 +10,7 @@ import { HygieneProduct } from '../../interfaces/hygiene-product';
 export class HygieneProductClient {
   constructor(private http: HttpClient) {}
 
-  getHygienesProducts(): Observable<HygieneProduct[]> {
+  getHygieneProduct(): Observable<HygieneProduct[]> {
     // return mon url
     return this.http.get<HygieneProduct[]>(environment.API_URL.HYGIENE_PRODUCT);
   }
